@@ -7,3 +7,7 @@
 
 [build.environment]
   NODE_VERSION = "22"
+
+# Declarado explicitamente porque deploys enviados sem ligação com o Git não o ativam sozinhos.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
