@@ -1,0 +1,9 @@
+# Configuração de build da Netlify.
+# O adaptador do Next.js (@netlify/plugin-nextjs) é instalado automaticamente pela Netlify:
+# ele transforma páginas dinâmicas e Server Actions (formulário de contato) em Netlify Functions.
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
