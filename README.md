@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NEXORA — site institucional
 
-## Getting Started
+Site da NEXORA, feito com Next.js 16 (App Router), TypeScript, Tailwind CSS 4 e Zod.
 
-First, run the development server:
+## Como rodar no seu computador
+
+Pré-requisito: Node.js 20.9 ou mais novo.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install                 # instala as dependências (só na primeira vez)
+cp .env.example .env.local  # cria o arquivo de configuração local e preencha os valores
+npm run dev                 # abre em http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Outros comandos:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Comando | O que faz |
+| --- | --- |
+| `npm run build` | Gera a versão de produção e acusa erros |
+| `npm run start` | Roda a versão de produção gerada pelo build |
+| `npm run lint` | Verifica a qualidade do código |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Onde fica cada coisa
 
-## Learn More
+| Pasta / arquivo | Conteúdo |
+| --- | --- |
+| `src/app/` | Páginas e rotas (`page.tsx` = página inicial) |
+| `src/app/actions/contact.ts` | Envio do formulário (roda só no servidor) |
+| `src/components/layout/` | Cabeçalho, rodapé, logo, botão do WhatsApp |
+| `src/components/sections/` | Seções da página inicial |
+| `src/components/ui/` | Peças reutilizáveis (botão, container, ícones) |
+| `src/content/` | **Textos do site**: edite aqui sem mexer no layout |
+| `src/lib/site-config.ts` | Nome, contatos, menu |
+| `src/lib/validation.ts` | Regras de validação do formulário |
+| `src/app/globals.css` | Cores e fontes (design tokens) |
 
-To learn more about Next.js, take a look at the following resources:
+Para trocar a cor de destaque, altere `--color-accent` e `--color-accent-soft` em `src/app/globals.css`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Variáveis de ambiente
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Veja `.env.example`. Variáveis `NEXT_PUBLIC_*` ficam visíveis no navegador, então nunca coloque segredos nelas.
+`RESEND_API_KEY` é secreta: configure-a apenas no painel da hospedagem e no `.env.local`, que nunca vai para o Git.
 
-## Deploy on Vercel
+## Segurança já implementada
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Validação do formulário no navegador e de novo no servidor (Zod)
+- Honeypot contra robôs
+- Conteúdo do visitante escapado antes de entrar no e-mail (contra XSS)
+- Cabeçalhos HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy e Permissions-Policy
+- Nenhum dado pessoal gravado em logs
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Pendências conhecidas
+
+- Turnstile (antibot) e limite de envios por IP — Etapa 6
+- Content-Security-Policy completa — Etapa 7
+- Política de Privacidade é uma **minuta**: preencher os campos entre colchetes e revisar com advogado
+- Portfólio: cases só aparecem quando `published: true` em `src/content/projects.ts`, e apenas com fatos reais
+- O menu móvel não fecha sozinho ao tocar num link
