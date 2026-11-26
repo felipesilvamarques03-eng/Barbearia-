@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { ButtonLink } from "@/components/ui/button-link";
-import { icons } from "@/components/ui/icons";
 import { siteConfig } from "@/lib/site-config";
 import { Logo } from "./logo";
+import { MobileMenu } from "./mobile-menu";
 
 export function Header() {
   return (
@@ -25,13 +25,7 @@ export function Header() {
         </nav>
 
         {/* Menu móvel sem JavaScript: <details> abre e fecha nativamente e funciona com teclado. */}
-        <details className="group relative md:hidden">
-          <summary
-            aria-label="Abrir menu"
-            className="flex size-11 cursor-pointer items-center justify-center rounded-lg border border-line-strong text-ink"
-          >
-            <icons.menu />
-          </summary>
+        <MobileMenu>
           <nav
             aria-label="Principal (móvel)"
             className="absolute right-0 top-14 flex w-64 flex-col gap-1 rounded-2xl border border-line bg-surface p-3 shadow-xl"
@@ -49,7 +43,7 @@ export function Header() {
               Solicitar orçamento
             </ButtonLink>
           </nav>
-        </details>
+        </MobileMenu>
       </Container>
     </header>
   );

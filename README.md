@@ -55,4 +55,3 @@ Veja `.env.example`. Variáveis `NEXT_PUBLIC_*` ficam visíveis no navegador, en
 - Content-Security-Policy completa — Etapa 7
 - Política de Privacidade é uma **minuta**: preencher os campos entre colchetes e revisar com advogado
 - Portfólio: cases só aparecem quando `published: true` em `src/content/projects.ts`, e apenas com fatos reais
-- O menu móvel não fecha sozinho ao tocar num link
