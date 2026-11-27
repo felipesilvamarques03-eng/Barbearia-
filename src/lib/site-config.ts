@@ -9,23 +9,23 @@ const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.replace(/\D/g, "
 export const siteConfig = {
   name: "NEXORA",
   legalName: "NEXORA Tecnologia",
-  tagline: "Software sob medida, entregue com velocidade de IA e rigor de engenharia.",
+  tagline: "Aprenda a criar sites, sistemas e apps com inteligência artificial.",
   description:
-    "A NEXORA desenvolve sites, sistemas, aplicativos, automações e soluções com inteligência artificial para profissionais e empresas, com segurança e conformidade com a LGPD.",
+    "Plataforma de assinatura para aprender a criar sites, sistemas e aplicativos com inteligência artificial, mesmo sem saber programar. Aulas em vídeo, projetos guiados e comunidade.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   locale: "pt_BR",
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "",
   cnpj: process.env.NEXT_PUBLIC_CNPJ ?? "",
   whatsapp: {
     number: whatsappNumber,
-    message: "Olá! Vim pelo site da NEXORA e gostaria de conversar sobre um projeto.",
+    message: "Olá! Vim pelo site da NEXORA e tenho uma dúvida sobre o plano.",
   },
   nav: [
-    { label: "Serviços", href: "/servicos" },
-    { label: "Soluções", href: "/solucoes" },
-    { label: "Portfólio", href: "/portfolio" },
-    { label: "Sobre", href: "/sobre" },
-    { label: "Contato", href: "/#contato" },
+    { label: "O que inclui", href: "/#o-que-inclui" },
+    { label: "Como funciona", href: "/#como-funciona" },
+    { label: "Trilha", href: "/#trilha" },
+    { label: "Plano", href: "/#plano" },
+    { label: "Dúvidas", href: "/#duvidas" },
   ],
 } as const;
 

@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 /** Imagem exibida quando o link do site é compartilhado (WhatsApp, LinkedIn, etc.). */
-export const alt = "NEXORA — Software sob medida, entregue com velocidade de IA e rigor de engenharia";
+export const alt = "NEXORA — Aprenda a criar sites, sistemas e apps com inteligência artificial";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -31,10 +31,10 @@ export default function OpengraphImage() {
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
           <span style={{ fontSize: 64, fontWeight: 700, lineHeight: 1.08, maxWidth: 980 }}>
-            Software sob medida, entregue com velocidade de IA e rigor de engenharia.
+            Aprenda a criar sites, sistemas e apps com inteligência artificial.
           </span>
           <span style={{ fontSize: 28, color: "#9aa1b2" }}>
-            Sites · Sistemas · Aplicativos · Automações · Inteligência artificial
+            Aulas em vídeo · Projetos guiados · Comunidade
           </span>
         </div>
         <div style={{ display: "flex", height: 6, width: 160, background: "#3cc8f0", borderRadius: 3 }} />

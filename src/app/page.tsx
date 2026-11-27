@@ -1,22 +1,15 @@
 import { Hero } from "@/components/sections/hero";
-import {
-  Differentials,
-  Faq,
-  Method,
-  PortfolioPreview,
-  Problems,
-  Services,
-} from "@/components/sections/home-sections";
-import { Contact } from "@/components/sections/contact";
+import { Audience, Curriculum, Faq, Includes, Journey, Pricing } from "@/components/sections/landing-sections";
+import { Waitlist } from "@/components/sections/waitlist";
 import { faq } from "@/content/home";
 import { siteConfig } from "@/lib/site-config";
 
-/** Dados estruturados (JSON-LD) para o Google entender a empresa e o FAQ. */
+/** Dados estruturados (JSON-LD) para o Google entender a organização e o FAQ. */
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": "EducationalOrganization",
       name: siteConfig.name,
       url: siteConfig.url,
       description: siteConfig.description,
@@ -42,13 +35,13 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
       />
       <Hero />
-      <Problems />
-      <Services />
-      <Method />
-      <PortfolioPreview />
-      <Differentials />
+      <Audience />
+      <Includes />
+      <Journey />
+      <Curriculum />
+      <Pricing />
       <Faq />
-      <Contact />
+      <Waitlist />
     </>
   );
 }

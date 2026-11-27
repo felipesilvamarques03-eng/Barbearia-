@@ -1,6 +1,9 @@
-# NEXORA — site institucional
+# NEXORA — página de pré-lançamento
 
-Site da NEXORA, feito com Next.js 16 (App Router), TypeScript, Tailwind CSS 4 e Zod.
+Site da NEXORA, plataforma de assinatura mensal para aprender a criar sites, sistemas e apps com IA.
+Fase atual: **pré-lançamento com lista de espera**. Próximas fases: área de membros (Supabase) e assinaturas (Mercado Pago).
+
+Feito com Next.js 16 (App Router), TypeScript, Tailwind CSS 4 e Zod. Hospedado na Netlify.
 
 ## Como rodar no seu computador
 
@@ -24,17 +27,20 @@ Outros comandos:
 
 | Pasta / arquivo | Conteúdo |
 | --- | --- |
-| `src/app/` | Páginas e rotas (`page.tsx` = página inicial) |
-| `src/app/actions/contact.ts` | Envio do formulário (roda só no servidor) |
+| `src/app/page.tsx` | Página principal (ordem das seções) |
+| `src/content/home.ts` | **Textos, preço e trilha**: edite aqui sem mexer no layout |
+| `src/components/sections/` | Seções da página e formulário da lista de espera |
 | `src/components/layout/` | Cabeçalho, rodapé, logo, botão do WhatsApp |
-| `src/components/sections/` | Seções da página inicial |
-| `src/components/ui/` | Peças reutilizáveis (botão, container, ícones) |
-| `src/content/` | **Textos do site**: edite aqui sem mexer no layout |
-| `src/lib/site-config.ts` | Nome, contatos, menu |
-| `src/lib/validation.ts` | Regras de validação do formulário |
+| `src/lib/validation.ts` | Regras de validação da lista de espera |
+| `public/__forms.html` | Esqueleto do formulário para a Netlify Forms (nomes dos campos devem bater com o componente) |
 | `src/app/globals.css` | Cores e fontes (design tokens) |
 
+Para trocar o preço, altere `priceMonthly` em `src/content/home.ts`.
 Para trocar a cor de destaque, altere `--color-accent` e `--color-accent-soft` em `src/app/globals.css`.
+
+## Lista de espera
+
+As inscrições são recebidas pela **Netlify Forms** (painel da Netlify → Forms → `lista-de-espera`), com filtro de spam e honeypot. Exporte em CSV e apague periodicamente (LGPD).
 
 ## Variáveis de ambiente
 
@@ -43,15 +49,14 @@ Veja `.env.example`. Variáveis `NEXT_PUBLIC_*` ficam visíveis no navegador, en
 
 ## Segurança já implementada
 
-- Validação do formulário no navegador e de novo no servidor (Zod)
-- Honeypot contra robôs
-- Conteúdo do visitante escapado antes de entrar no e-mail (contra XSS)
+- Validação do formulário com Zod antes do envio
+- Honeypot e filtro de spam (Akismet) da Netlify; conteúdo higienizado pela Netlify
 - Cabeçalhos HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy e Permissions-Policy
 - Nenhum dado pessoal gravado em logs
 
 ## Pendências conhecidas
 
-- Turnstile (antibot) e limite de envios por IP — Etapa 6
-- Content-Security-Policy completa — Etapa 7
+- Área de membros (login, aulas, progresso) — Supabase
+- Assinatura recorrente — Mercado Pago (Pix e cartão), com webhooks e termos de uso
+- Content-Security-Policy completa
 - Política de Privacidade é uma **minuta**: preencher os campos entre colchetes e revisar com advogado
-- Portfólio: cases só aparecem quando `published: true` em `src/content/projects.ts`, e apenas com fatos reais

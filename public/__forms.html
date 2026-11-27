@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <title>Formulários</title>
+  </head>
+  <body>
+    <!--
+      Esqueleto estático para a Netlify detectar o formulário no deploy.
+      Os nomes dos campos precisam ser IDÊNTICOS aos do componente waitlist-form.tsx.
+    -->
+    <form name="lista-de-espera" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="lista-de-espera" />
+      <input name="bot-field" />
+      <input type="hidden" name="subject" value="Nova inscrição na lista de espera da NEXORA" />
+      <input name="nome" type="text" />
+      <input name="email" type="email" />
+      <input name="whatsapp" type="tel" />
+      <select name="nivel">
+        <option>Nunca programei</option>
+        <option>Já mexi um pouco com código</option>
+        <option>Já programo</option>
+      </select>
+      <textarea name="objetivo"></textarea>
+      <input name="consentimento" type="checkbox" />
+    </form>
+  </body>
+</html>

@@ -1,74 +1,82 @@
 import type { IconName } from "@/components/ui/icons";
 
 /*
- * Textos da página inicial.
- * Ficam aqui, separados dos componentes, para que mudar um texto não exija mexer no layout.
- * Regra da casa: nada de números, clientes ou resultados inventados.
+ * Textos da página de pré-lançamento da NEXORA (assinatura para aprender a criar apps com IA).
+ * Regra da casa: nada de números de alunos, depoimentos ou resultados inventados.
+ * O conteúdo da trilha é PLANEJADO e está marcado assim no site até as aulas existirem.
  */
 
-export const problems = [
+export const plan = {
+  name: "Plano NEXORA",
+  /** Preço sugerido dentro da faixa decidida (R$ 29–49). Altere aqui. */
+  priceMonthly: 39,
+  includes: [
+    "Aulas em vídeo, do zero à publicação",
+    "Projetos guiados passo a passo",
+    "Comunidade de alunos para tirar dúvidas",
+    "Novas aulas e projetos todo mês",
+    "Cancele quando quiser, sem multa",
+  ],
+} as const;
+
+export const audience = [
   {
-    title: "Processos manuais tomando o seu dia",
-    text: "Agendas no papel, planilhas soltas e retrabalho que poderiam ser automatizados.",
+    title: "Você tem uma ideia, mas não sabe programar",
+    text: "Um app para o seu negócio, um site, uma ferramenta. Você vai aprender a tirar do papel usando IA.",
   },
   {
-    title: "Presença digital que não traz clientes",
-    text: "Um site que não aparece no Google, não funciona no celular e não converte visitas.",
+    title: "Você quer trabalhar com tecnologia",
+    text: "Aprenda a criar projetos reais para montar portfólio e atender os primeiros clientes.",
   },
   {
-    title: "Sistemas genéricos que não se encaixam",
-    text: "Ferramentas prontas que obrigam o seu negócio a se adaptar a elas, e não o contrário.",
+    title: "Você já usa IA, mas não sai do básico",
+    text: "Vá além das perguntas no chat: use a IA como parceira para planejar, construir e publicar.",
   },
 ] as const;
 
-export const services: { icon: IconName; title: string; text: string }[] = [
-  { icon: "site", title: "Sites institucionais", text: "Rápidos, bonitos no celular e prontos para aparecer no Google." },
-  { icon: "system", title: "Sistemas web", text: "Agendamentos, painéis, cadastros e gestão sob medida para o seu processo." },
-  { icon: "app", title: "Aplicativos", text: "Apps para celular e web que seus clientes e sua equipe usam de verdade." },
-  { icon: "automation", title: "Automações", text: "Integrações e rotinas automáticas que eliminam trabalho repetitivo." },
-  { icon: "ai", title: "Soluções com IA", text: "Atendimento, análise de documentos e assistentes preparados para o seu negócio." },
-  { icon: "shield", title: "Manutenção e suporte", text: "Atualizações, backups, monitoramento e melhorias contínuas após a entrega." },
+export const includes: { icon: IconName; title: string; text: string }[] = [
+  { icon: "site", title: "Aulas em vídeo", text: "Explicações curtas e diretas, em português, sem pressupor que você já sabe programar." },
+  { icon: "system", title: "Projetos guiados", text: "Você constrói projetos reais do início ao fim, com o passo a passo e o código de referência." },
+  { icon: "chat", title: "Comunidade", text: "Um espaço para tirar dúvidas, mostrar o que construiu e aprender com outros alunos." },
+  { icon: "shield", title: "Boas práticas desde o início", text: "Segurança, proteção de dados e LGPD fazem parte de cada projeto, não são um capítulo opcional." },
 ];
 
-export const method = [
-  { title: "Entendimento", text: "Reunião para entender o problema, o público e o objetivo do projeto." },
-  { title: "Proposta e arquitetura", text: "Escopo fechado, prazo, investimento e plano técnico por escrito." },
-  { title: "Protótipo", text: "Você vê e aprova as telas antes de qualquer linha de código." },
-  { title: "Desenvolvimento e testes", text: "Entregas por etapas, com testes funcionais e de segurança." },
-  { title: "Entrega e suporte", text: "Publicação, documentação, treinamento e acompanhamento." },
+/** Como funciona a jornada do aluno. */
+export const journey = [
+  { title: "Assine o plano", text: "Acesso imediato à área de membros, cancelável a qualquer momento." },
+  { title: "Siga a trilha", text: "Comece pelo básico: como pensar um projeto e conversar com a IA para construí-lo." },
+  { title: "Construa projetos reais", text: "Cada módulo termina com algo funcionando, publicado na internet." },
+  { title: "Evolua com a comunidade", text: "Tire dúvidas, receba sugestões e acompanhe as novas aulas do mês." },
 ] as const;
 
-/** Etapas mostradas no painel do hero (ilustrativo, marcado como "Exemplo"). */
-export const heroSteps = [
-  { label: "Levantamento de requisitos", status: "done" },
-  { label: "Arquitetura e protótipo", status: "done" },
-  { label: "Desenvolvimento", status: "current" },
-  { label: "Testes funcionais e de segurança", status: "next" },
-  { label: "Implantação e entrega", status: "next" },
-] as const;
-
-export const differentials = [
-  { title: "Segurança desde o início", text: "Autenticação, validação de dados e proteção contra ataques comuns em todo projeto." },
-  { title: "LGPD levada a sério", text: "Dados pessoais tratados com consentimento, controle de acesso e transparência." },
-  { title: "O código é seu", text: "Você recebe o projeto, a documentação e os acessos. Sem prisão a fornecedor." },
-  { title: "Comunicação clara", text: "Sem jargão: você sabe o que está pronto, o que falta e o que precisa decidir." },
+/** Trilha inicial PLANEJADA (exibida como "em produção" até as aulas estarem prontas). */
+export const curriculum = [
+  { title: "Fundamentos", text: "Como funciona um site e um app, e como trabalhar com a IA como parceira." },
+  { title: "Seu primeiro site", text: "Do zero a um site publicado na internet, com domínio e formulário de contato." },
+  { title: "Banco de dados e login", text: "Guardar informações com segurança e criar áreas com acesso por senha." },
+  { title: "Seu primeiro sistema", text: "Um sistema completo, como agendamento ou controle de pedidos." },
+  { title: "Publicar e manter", text: "Colocar no ar, corrigir erros, fazer backups e cuidar da segurança." },
 ] as const;
 
 export const faq = [
   {
-    q: "Quanto custa um projeto?",
-    a: "O valor depende do escopo. Depois de uma conversa inicial, você recebe uma proposta com escopo, prazo e investimento fechados.",
+    q: "Preciso saber programar?",
+    a: "Não. O plano foi pensado para quem está começando. Você aprende os conceitos necessários enquanto constrói, com a IA ajudando a escrever o código.",
   },
   {
-    q: "Quanto tempo leva?",
-    a: "Um site institucional costuma levar de 3 a 5 semanas. Sistemas e aplicativos têm o prazo definido na proposta, de acordo com o escopo.",
+    q: "Quando o plano abre?",
+    a: "Estamos finalizando a plataforma e as primeiras aulas. Quem entra na lista de espera é avisado primeiro quando as inscrições abrirem.",
   },
   {
-    q: "Preciso entender de tecnologia?",
-    a: "Não. Explicamos cada etapa em linguagem simples e você aprova as telas antes do desenvolvimento começar.",
+    q: "O que eu preciso para acompanhar?",
+    a: "Um computador com internet. As ferramentas de IA usadas nas aulas têm opções gratuitas e pagas; explicamos em cada aula o que é necessário.",
   },
   {
-    q: "E depois da entrega?",
-    a: "Você recebe a documentação e os acessos do projeto. Também oferecemos planos de manutenção e suporte.",
+    q: "Posso cancelar?",
+    a: "Sim, a qualquer momento, sem multa. Você também tem 7 dias após a assinatura para desistir com reembolso integral, como prevê o Código de Defesa do Consumidor.",
+  },
+  {
+    q: "Entrar na lista de espera me obriga a assinar?",
+    a: "Não. A lista só serve para avisar você quando as inscrições abrirem. Nenhuma cobrança é feita.",
   },
 ] as const;

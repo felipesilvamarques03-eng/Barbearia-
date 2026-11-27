@@ -17,7 +17,7 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} — Desenvolvimento de software sob medida`,
+    default: `${siteConfig.name} — Aprenda a criar apps com inteligência artificial`,
     template: `%s · ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: siteConfig.locale,
     siteName: siteConfig.name,
-    title: `${siteConfig.name} — Desenvolvimento de software sob medida`,
+    title: `${siteConfig.name} — Aprenda a criar apps com inteligência artificial`,
     description: siteConfig.description,
     url: "/",
   },

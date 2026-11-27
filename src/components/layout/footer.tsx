@@ -16,15 +16,13 @@ export function Footer() {
       <Container className="flex flex-wrap justify-between gap-6 py-12 text-sm text-muted">
         <div className="flex flex-col gap-2">
           <span className="font-display text-lg font-bold tracking-[0.08em] text-ink">NEXORA</span>
-          <span>Tecnologia sob medida.</span>
+          <span>Aprenda a criar com inteligência artificial.</span>
           {siteConfig.cnpj ? <span>CNPJ {siteConfig.cnpj}</span> : null}
         </div>
         <nav aria-label="Rodapé" className="flex flex-wrap items-center gap-x-6 gap-y-2">
-          <Link href="/servicos" className="hover:text-ink">Serviços</Link>
-          <Link href="/solucoes" className="hover:text-ink">Soluções</Link>
-          <Link href="/portfolio" className="hover:text-ink">Portfólio</Link>
-          <Link href="/sobre" className="hover:text-ink">Sobre</Link>
-          <Link href="/#contato" className="hover:text-ink">Contato</Link>
+          <Link href="/#plano" className="hover:text-ink">Plano</Link>
+          <Link href="/#duvidas" className="hover:text-ink">Dúvidas</Link>
+          <Link href="/#lista" className="hover:text-ink">Lista de espera</Link>
           <Link href="/politica-de-privacidade" className="hover:text-ink">Política de Privacidade</Link>
           <span>© <CurrentYear /> {siteConfig.name}</span>
         </nav>

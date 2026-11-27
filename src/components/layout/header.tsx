@@ -19,8 +19,8 @@ export function Header() {
               {item.label}
             </Link>
           ))}
-          <ButtonLink href="/#contato" className="min-h-11 px-[18px] py-2">
-            Solicitar orçamento
+          <ButtonLink href="/#lista" className="min-h-11 px-[18px] py-2">
+            Entrar na lista
           </ButtonLink>
         </nav>
 
@@ -39,8 +39,8 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-            <ButtonLink href="/#contato" className="mt-2">
-              Solicitar orçamento
+            <ButtonLink href="/#lista" className="mt-2">
+              Entrar na lista
             </ButtonLink>
           </nav>
         </MobileMenu>
