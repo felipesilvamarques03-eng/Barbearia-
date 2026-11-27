@@ -4,6 +4,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { icons } from "@/components/ui/icons";
 import { differentials, faq, method, problems, services } from "@/content/home";
 import { publishedProjects } from "@/content/projects";
+import { ProjectCard } from "./project-card";
 
 const band = "border-y border-[#1c2029] bg-bg-alt";
 
@@ -35,7 +36,12 @@ export function Services() {
   return (
     <section id="servicos" aria-labelledby="servicos-title">
       <Container className="flex flex-col gap-12 py-28">
-        <SectionHeading id="servicos-title" eyebrow="Serviços" title="Do site institucional ao sistema completo." />
+        <div className="flex flex-wrap items-end justify-between gap-6">
+          <SectionHeading id="servicos-title" eyebrow="Serviços" title="Do site institucional ao sistema completo." />
+          <Link href="/servicos" className="flex min-h-11 items-center font-medium text-accent hover:underline">
+            Ver detalhes dos serviços →
+          </Link>
+        </div>
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s) => {
             const Icon = icons[s.icon];
@@ -92,16 +98,9 @@ export function PortfolioPreview() {
         />
         {publishedProjects.length > 0 ? (
           <ul className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {publishedProjects.map((p) => (
-              <li key={p.slug} className="overflow-hidden rounded-2xl border border-line bg-surface">
-                <div className="flex flex-col gap-2.5 p-6">
-                  <div className="flex flex-wrap gap-2 text-xs text-ink-2">
-                    <span className="rounded-full border border-line-strong px-2.5 py-0.5">{p.segment}</span>
-                    <span className="rounded-full border border-line-strong px-2.5 py-0.5">{p.kind}</span>
-                  </div>
-                  <h3 className="text-[19px] font-semibold">{p.title}</h3>
-                  <p className="text-[15px] text-muted">{p.summary}</p>
-                </div>
+            {publishedProjects.slice(0, 3).map((p) => (
+              <li key={p.slug}>
+                <ProjectCard project={p} />
               </li>
             ))}
           </ul>

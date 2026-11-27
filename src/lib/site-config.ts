@@ -21,10 +21,10 @@ export const siteConfig = {
     message: "Olá! Vim pelo site da NEXORA e gostaria de conversar sobre um projeto.",
   },
   nav: [
-    { label: "Serviços", href: "/#servicos" },
-    { label: "Método", href: "/#metodo" },
-    { label: "Portfólio", href: "/#portfolio" },
-    { label: "Diferenciais", href: "/#diferenciais" },
+    { label: "Serviços", href: "/servicos" },
+    { label: "Soluções", href: "/solucoes" },
+    { label: "Portfólio", href: "/portfolio" },
+    { label: "Sobre", href: "/sobre" },
     { label: "Contato", href: "/#contato" },
   ],
 } as const;

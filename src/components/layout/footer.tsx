@@ -20,8 +20,10 @@ export function Footer() {
           {siteConfig.cnpj ? <span>CNPJ {siteConfig.cnpj}</span> : null}
         </div>
         <nav aria-label="Rodapé" className="flex flex-wrap items-center gap-x-6 gap-y-2">
-          <Link href="/#servicos" className="hover:text-ink">Serviços</Link>
-          <Link href="/#portfolio" className="hover:text-ink">Portfólio</Link>
+          <Link href="/servicos" className="hover:text-ink">Serviços</Link>
+          <Link href="/solucoes" className="hover:text-ink">Soluções</Link>
+          <Link href="/portfolio" className="hover:text-ink">Portfólio</Link>
+          <Link href="/sobre" className="hover:text-ink">Sobre</Link>
           <Link href="/#contato" className="hover:text-ink">Contato</Link>
           <Link href="/politica-de-privacidade" className="hover:text-ink">Política de Privacidade</Link>
           <span>© <CurrentYear /> {siteConfig.name}</span>
