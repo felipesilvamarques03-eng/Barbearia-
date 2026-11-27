@@ -11,7 +11,7 @@ export const plan = {
   /** Preço sugerido dentro da faixa decidida (R$ 29–49). Altere aqui. */
   priceMonthly: 39,
   includes: [
-    "Aulas em vídeo, do zero à publicação",
+    "Aulas passo a passo, do zero à publicação",
     "Projetos guiados passo a passo",
     "Comunidade de alunos para tirar dúvidas",
     "Novas aulas e projetos todo mês",
@@ -35,7 +35,7 @@ export const audience = [
 ] as const;
 
 export const includes: { icon: IconName; title: string; text: string }[] = [
-  { icon: "site", title: "Aulas em vídeo", text: "Explicações curtas e diretas, em português, sem pressupor que você já sabe programar." },
+  { icon: "site", title: "Aulas passo a passo", text: "Explicações diretas, em português, com exercícios práticos. Versões em vídeo sendo gravadas." },
   { icon: "system", title: "Projetos guiados", text: "Você constrói projetos reais do início ao fim, com o passo a passo e o código de referência." },
   { icon: "chat", title: "Comunidade", text: "Um espaço para tirar dúvidas, mostrar o que construiu e aprender com outros alunos." },
   { icon: "shield", title: "Boas práticas desde o início", text: "Segurança, proteção de dados e LGPD fazem parte de cada projeto, não são um capítulo opcional." },
@@ -64,8 +64,8 @@ export const faq = [
     a: "Não. O plano foi pensado para quem está começando. Você aprende os conceitos necessários enquanto constrói, com a IA ajudando a escrever o código.",
   },
   {
-    q: "Quando o plano abre?",
-    a: "Estamos finalizando a plataforma e as primeiras aulas. Quem entra na lista de espera é avisado primeiro quando as inscrições abrirem.",
+    q: "Posso começar de graça?",
+    a: "Sim. Crie uma conta gratuita e acesse agora todo o Módulo 1. A assinatura, que libera os demais módulos, abre em breve.",
   },
   {
     q: "O que eu preciso para acompanhar?",
@@ -76,7 +76,7 @@ export const faq = [
     a: "Sim, a qualquer momento, sem multa. Você também tem 7 dias após a assinatura para desistir com reembolso integral, como prevê o Código de Defesa do Consumidor.",
   },
   {
-    q: "Entrar na lista de espera me obriga a assinar?",
-    a: "Não. A lista só serve para avisar você quando as inscrições abrirem. Nenhuma cobrança é feita.",
+    q: "Criar a conta gratuita me obriga a assinar?",
+    a: "Não. A conta gratuita não pede cartão e não gera cobrança. Você só assina se quiser.",
   },
 ] as const;

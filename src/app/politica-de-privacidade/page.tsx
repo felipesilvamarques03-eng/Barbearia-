@@ -19,45 +19,46 @@ export default function PrivacyPage() {
     <Container className="max-w-[760px] py-20">
       <article className="flex flex-col gap-6 text-ink-2 [&_h2]:mt-6 [&_h2]:font-display [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:text-ink [&_li]:ml-5 [&_li]:list-disc">
         <h1 className="font-display text-4xl font-semibold text-ink">Política de Privacidade</h1>
-        <p className="text-sm text-muted">Versão de pré-lançamento. Última atualização: 27 de novembro de 2026.</p>
+        <p className="text-sm text-muted">Última atualização: 27 de novembro de 2026.</p>
 
         <p>
           Esta política explica como a {siteConfig.name} ([RAZÃO SOCIAL], CNPJ {siteConfig.cnpj || "[CNPJ]"}) trata os
-          dados pessoais de quem visita este site e se inscreve na lista de espera, em conformidade com a Lei Geral de
+          dados pessoais de quem visita este site e cria uma conta, em conformidade com a Lei Geral de
           Proteção de Dados (Lei nº 13.709/2018).
         </p>
 
         <h2>Quais dados coletamos</h2>
         <ul>
           <li>
-            Dados que você informa na lista de espera: nome, e-mail, WhatsApp (opcional), nível de experiência e,
-            se quiser, o que gostaria de criar.
+            Dados da sua conta: nome, e-mail e senha. A senha é guardada de forma criptografada e irreversível:
+            ninguém da NEXORA consegue vê-la.
           </li>
           <li>Dados técnicos mínimos para o funcionamento e a segurança do site, como endereço IP e registros de acesso.</li>
         </ul>
 
         <h2>Para que usamos</h2>
         <ul>
-          <li>Avisar você sobre a abertura das inscrições e sobre o lançamento da plataforma.</li>
-          <li>Entender o perfil dos interessados para planejar as primeiras aulas e projetos.</li>
+          <li>Dar acesso às aulas e registrar o seu progresso.</li>
+          <li>Enviar comunicações sobre a sua conta e a sua assinatura.</li>
           <li>Proteger o site contra abuso, spam e ataques.</li>
         </ul>
         <p>Não vendemos seus dados nem os compartilhamos para marketing de terceiros.</p>
 
         <h2>Base legal</h2>
-        <p>Consentimento (art. 7º, I), dado ao marcar a caixa do formulário. Você pode revogá-lo quando quiser.</p>
+        <p>Execução do contrato de uso da plataforma (art. 7º, V) e consentimento (art. 7º, I), dado ao criar a conta.</p>
 
         <h2>Com quem compartilhamos</h2>
         <p>
-          Apenas com fornecedores necessários para operar o site. Hoje, a Netlify (hospedagem e armazenamento das
-          inscrições), com servidores nos Estados Unidos. A transferência internacional segue as garantias previstas
-          na LGPD.
+          Apenas com fornecedores necessários para operar a plataforma: Supabase (banco de dados e login, com
+          servidores em São Paulo), Netlify (hospedagem, com servidores nos Estados Unidos) e, quando a assinatura
+          abrir, Mercado Pago (pagamentos). Dados de cartão e CPF ficam somente com o Mercado Pago; não os guardamos.
+          Transferências internacionais seguem as garantias previstas na LGPD.
         </p>
 
         <h2>Por quanto tempo guardamos</h2>
         <p>
-          Até o lançamento da plataforma e por até 12 meses depois, ou até você pedir a exclusão, o que vier
-          primeiro. [CONFIRMAR PRAZO]
+          Enquanto a sua conta existir. Ao pedir a exclusão, apagamos a conta e o progresso, exceto o que a lei
+          obrigar a manter. [CONFIRMAR PRAZOS LEGAIS]
         </p>
 
         <h2>Seus direitos</h2>

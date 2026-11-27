@@ -1,6 +1,5 @@
 import { Hero } from "@/components/sections/hero";
-import { Audience, Curriculum, Faq, Includes, Journey, Pricing } from "@/components/sections/landing-sections";
-import { Waitlist } from "@/components/sections/waitlist";
+import { Audience, Curriculum, Faq, Includes, Journey, Pricing, SignupCta } from "@/components/sections/landing-sections";
 import { faq } from "@/content/home";
 import { siteConfig } from "@/lib/site-config";
 
@@ -41,7 +40,7 @@ export default function HomePage() {
       <Curriculum />
       <Pricing />
       <Faq />
-      <Waitlist />
+      <SignupCta />
     </>
   );
 }

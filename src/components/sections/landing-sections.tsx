@@ -116,7 +116,7 @@ export function Pricing() {
         <div className="flex w-full max-w-[460px] flex-col gap-6 rounded-[20px] border-2 border-accent bg-surface p-8">
           <div className="flex items-center justify-between">
             <span className="font-display text-xl font-semibold">{plan.name}</span>
-            <span className="rounded-full bg-accent-soft px-3 py-1 text-xs font-medium text-accent">Em breve</span>
+            <span className="rounded-full bg-accent-soft px-3 py-1 text-xs font-medium text-accent">Assinatura em breve</span>
           </div>
           <p className="flex items-baseline gap-1.5">
             <span className="font-display text-5xl font-semibold">{brl.format(plan.priceMonthly)}</span>
@@ -130,8 +130,8 @@ export function Pricing() {
               </li>
             ))}
           </ul>
-          <ButtonLink href="/#lista">Entrar na lista de espera</ButtonLink>
-          <p className="text-center text-[13px] text-muted">Nenhuma cobrança agora. Avisamos quando abrir.</p>
+          <ButtonLink href="/cadastro">Começar grátis pelo Módulo 1</ButtonLink>
+          <p className="text-center text-[13px] text-muted">Crie a conta sem cartão. Avisamos quando a assinatura abrir.</p>
         </div>
       </Container>
     </section>
@@ -158,6 +158,22 @@ export function Faq() {
             </details>
           ))}
         </div>
+      </Container>
+    </section>
+  );
+}
+
+export function SignupCta() {
+  return (
+    <section id="comecar" aria-labelledby="comecar-title" className="border-t border-[#1c2029] bg-bg-alt">
+      <Container className="flex flex-col items-start gap-6 py-24 md:flex-row md:items-center md:justify-between">
+        <div className="flex max-w-[640px] flex-col gap-3">
+          <h2 id="comecar-title" className="font-display text-[34px] font-semibold leading-[1.08] tracking-[-0.01em] text-balance sm:text-[44px]">
+            Comece agora pelo Módulo 1, de graça.
+          </h2>
+          <p className="text-[17px] text-muted">Crie sua conta em menos de um minuto, sem cartão de crédito.</p>
+        </div>
+        <ButtonLink href="/cadastro">Criar conta grátis</ButtonLink>
       </Container>
     </section>
   );

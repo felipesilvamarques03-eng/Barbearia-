@@ -22,7 +22,8 @@ export function Footer() {
         <nav aria-label="Rodapé" className="flex flex-wrap items-center gap-x-6 gap-y-2">
           <Link href="/#plano" className="hover:text-ink">Plano</Link>
           <Link href="/#duvidas" className="hover:text-ink">Dúvidas</Link>
-          <Link href="/#lista" className="hover:text-ink">Lista de espera</Link>
+          <Link href="/entrar" className="hover:text-ink">Entrar</Link>
+          <Link href="/termos" className="hover:text-ink">Termos de Uso</Link>
           <Link href="/politica-de-privacidade" className="hover:text-ink">Política de Privacidade</Link>
           <span>© <CurrentYear /> {siteConfig.name}</span>
         </nav>

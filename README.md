@@ -1,7 +1,7 @@
-# NEXORA — página de pré-lançamento
+# NEXORA — plataforma de aulas
 
 Site da NEXORA, plataforma de assinatura mensal para aprender a criar sites, sistemas e apps com IA.
-Fase atual: **pré-lançamento com lista de espera**. Próximas fases: área de membros (Supabase) e assinaturas (Mercado Pago).
+Fase atual: **cadastro gratuito + Módulo 1 grátis + área do aluno**. Próxima fase: assinaturas (Mercado Pago).
 
 Feito com Next.js 16 (App Router), TypeScript, Tailwind CSS 4 e Zod. Hospedado na Netlify.
 
@@ -38,9 +38,20 @@ Outros comandos:
 Para trocar o preço, altere `priceMonthly` em `src/content/home.ts`.
 Para trocar a cor de destaque, altere `--color-accent` e `--color-accent-soft` em `src/app/globals.css`.
 
-## Lista de espera
+## Área do aluno
 
-As inscrições são recebidas pela **Netlify Forms** (painel da Netlify → Forms → `lista-de-espera`), com filtro de spam e honeypot. Exporte em CSV e apague periodicamente (LGPD).
+| Rota | O que é |
+| --- | --- |
+| `/cadastro`, `/entrar` | Criar conta e entrar (Supabase Auth) |
+| `/aulas` | Painel do aluno: módulos, aulas e progresso |
+| `/aulas/[slug]` | Aula (conteúdo vem do banco, protegido por RLS) |
+| `/admin` | Painel do dono: só nome, e-mail, status e data |
+
+- **Conteúdo das aulas fica no banco** (tabela `lesson_contents`), nunca no repositório, que é público.
+- Aulas com `is_free = true` abrem para qualquer conta; as demais só com assinatura `ativa`.
+- Para tornar alguém administrador: `insert into public.admins (user_id) select id from auth.users where email = '...';`
+- Estrutura do banco: `supabase/migrations/`.
+- Testes locais: o `fetch` do Node só usa proxy com `NODE_USE_ENV_PROXY=1` (necessário apenas em ambientes com proxy).
 
 ## Variáveis de ambiente
 

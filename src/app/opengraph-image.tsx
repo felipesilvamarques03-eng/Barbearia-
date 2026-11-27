@@ -34,7 +34,7 @@ export default function OpengraphImage() {
             Aprenda a criar sites, sistemas e apps com inteligência artificial.
           </span>
           <span style={{ fontSize: 28, color: "#9aa1b2" }}>
-            Aulas em vídeo · Projetos guiados · Comunidade
+            Módulo 1 grátis · Projetos guiados · Comunidade
           </span>
         </div>
         <div style={{ display: "flex", height: 6, width: 160, background: "#3cc8f0", borderRadius: 3 }} />

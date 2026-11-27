@@ -19,7 +19,7 @@ export function Hero() {
         <div className="flex flex-col gap-7">
           <span className="inline-flex items-center gap-2 text-[13px] font-medium uppercase tracking-[0.12em] text-muted">
             <span className="size-2 rounded-full bg-accent" aria-hidden="true" />
-            Pré-lançamento · lista de espera aberta
+            Módulo 1 gratuito · comece hoje
           </span>
           <h1
             id="hero-title"
@@ -28,11 +28,11 @@ export function Hero() {
             Aprenda a criar sites, sistemas e apps com inteligência artificial.
           </h1>
           <p className="max-w-[540px] text-lg text-muted sm:text-[19px]">
-            Mesmo sem saber programar. Aulas em vídeo, projetos guiados do zero à publicação e uma comunidade para
+            Mesmo sem saber programar. Aulas passo a passo, projetos guiados do zero à publicação e uma comunidade para
             aprender junto — num plano mensal acessível.
           </p>
           <div className="flex flex-wrap gap-3">
-            <ButtonLink href="/#lista">Entrar na lista de espera</ButtonLink>
+            <ButtonLink href="/cadastro">Criar conta grátis</ButtonLink>
             <ButtonLink href="/#como-funciona" variant="secondary">
               Como funciona
             </ButtonLink>

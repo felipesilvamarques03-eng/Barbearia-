@@ -19,8 +19,11 @@ export function Header() {
               {item.label}
             </Link>
           ))}
-          <ButtonLink href="/#lista" className="min-h-11 px-[18px] py-2">
-            Entrar na lista
+          <Link href="/entrar" className="text-ink-2 transition-colors hover:text-ink">
+            Entrar
+          </Link>
+          <ButtonLink href="/cadastro" className="min-h-11 px-[18px] py-2">
+            Criar conta grátis
           </ButtonLink>
         </nav>
 
@@ -39,8 +42,11 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-            <ButtonLink href="/#lista" className="mt-2">
-              Entrar na lista
+            <Link href="/entrar" className="flex min-h-11 items-center rounded-lg px-3 text-ink-2 hover:bg-surface-2 hover:text-ink">
+              Entrar
+            </Link>
+            <ButtonLink href="/cadastro" className="mt-2">
+              Criar conta grátis
             </ButtonLink>
           </nav>
         </MobileMenu>

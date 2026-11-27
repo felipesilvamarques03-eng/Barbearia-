@@ -56,3 +56,63 @@ details > summary {
 details > summary::-webkit-details-marker {
   display: none;
 }
+
+/* Conteúdo das aulas (Markdown renderizado) */
+.lesson-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  color: var(--color-ink-2);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+.lesson-content h2 {
+  margin-top: 1.5rem;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-ink);
+}
+.lesson-content h3 {
+  margin-top: 0.75rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+.lesson-content strong { color: var(--color-ink); }
+.lesson-content a { color: var(--color-accent); text-decoration: underline; }
+.lesson-content ul, .lesson-content ol { display: flex; flex-direction: column; gap: 0.4rem; padding-left: 1.4rem; }
+.lesson-content ul { list-style: disc; }
+.lesson-content ol { list-style: decimal; }
+.lesson-content li::marker { color: var(--color-accent); }
+.lesson-content li:has(> input[type="checkbox"]) { list-style: none; margin-left: -1.4rem; }
+.lesson-content li > input[type="checkbox"] { margin-right: 0.5rem; accent-color: var(--color-accent); }
+.lesson-content blockquote {
+  border-left: 3px solid var(--color-accent);
+  background: var(--color-surface);
+  padding: 0.9rem 1.1rem;
+  border-radius: 0 10px 10px 0;
+  color: var(--color-ink);
+}
+.lesson-content code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.9em;
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-line);
+  border-radius: 6px;
+  padding: 0.1rem 0.35rem;
+}
+.lesson-content pre {
+  overflow-x: auto;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.lesson-content pre code { background: none; border: 0; padding: 0; }
+.lesson-content table { width: 100%; border-collapse: collapse; font-size: 0.95rem; display: block; overflow-x: auto; }
+.lesson-content th, .lesson-content td { border: 1px solid var(--color-line); padding: 0.55rem 0.8rem; text-align: left; }
+.lesson-content th { background: var(--color-surface); color: var(--color-ink); }
