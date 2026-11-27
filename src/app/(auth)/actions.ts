@@ -66,8 +66,17 @@ export async function signUp(_prev: AuthState, formData: FormData): Promise<Auth
   });
 
   if (error) {
+    // Registra só o código do erro, nunca o e-mail (LGPD).
+    console.error(`[cadastro] falhou: ${error.code ?? error.status}`);
     if (error.code === "weak_password") {
       return { error: "Senha fraca. Use pelo menos 8 caracteres, misturando letras e números.", email: values.email, nome: values.nome };
+    }
+    if (error.code === "email_address_invalid") {
+      return {
+        error: "Não conseguimos enviar o e-mail de confirmação para este endereço. Confira o e-mail digitado ou tente mais tarde.",
+        email: values.email,
+        nome: values.nome,
+      };
     }
     if (error.code === "over_email_send_rate_limit") {
       return { error: "Muitos cadastros agora. Tente novamente em alguns minutos.", email: values.email, nome: values.nome };
